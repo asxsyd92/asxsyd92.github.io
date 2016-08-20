@@ -34,17 +34,17 @@ body{font-size:12px;color:#555555;}
 .banner {
 
     background: url('../images/mo.jpg')no-repeat;
-    min-height: 550px;
+    min-height: 400px;
     background-size: 100% 100%;
 }
 .banner1 {
 	background: url('../images/b3.jpg')no-repeat;
-	min-height: 550px;
+	min-height: 400px;
 	 background-size: 100% 100%;
 }
 .banner2 {
 	background: url('../images/b2.jpg')no-repeat;
-	min-height: 550px;
+	min-height: 400px;
 	 background-size: 100% 100%;
 }
 span.roundplay-bwn {
