@@ -9,15 +9,70 @@
     <title></title>
     <link href="assets/css/Style.css" rel="stylesheet" />
     <!--<script src="assets/js/jquery.min.js"></script>-->
+    <link href="assets/css/pgwmenu.css" rel="stylesheet" />
     <link href="assets/css/popup-box.css" rel="stylesheet" />
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/responsiveslides.min.js"></script>
+    <script src="assets/js/pgwmenu.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.js"></script>
+    <style>
+        h1 {
+            padding: 30px 0;
+            font: 32px "Microsoft Yahei";
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 50px;
+            font: 24px "Microsoft Yahei";
+        }
+
+        body {
+            font-size: 14px;
+        }
+
+        .dowebok-explain {
+            margin-top: 20px;
+            font-size: 14px;
+            text-align: center;
+            color: #f50;
+        }
+
+        .pgwMenu a {
+            padding: 0 30px;
+        }
+
+    </style>
+
 </head>
 <body>
     <div style="margin-top:50px">
     </div>
-    <div class="navbox">
+    <ul class="pgwMenu light">
+        <li><a class="selected" href="#">首页</a></li>
+        <li><a href="#">代码</a></li>
+        <li><a href="#">素材</a></li>
+        <li><a href="#">模板</a></li>
+        <li><a href="javascript:">关于</a></li>
+        <li><a href="javascript:">服务</a></li>
+        <li><a href="#">联系</a></li>
+    </ul>
+    <script type="text/javascript">
+    $(function () {
+        $('.pgwMenu').pgwMenu({
+            dropDownLabel: '菜单',
+            viewMoreLabel: '更多<span class="icon"></span>'
+        });
+
+        $('.pgwMenuCustom').pgwMenu({
+            mainClassName: 'pgwMenuCustom',
+            dropDownLabel: '菜单',
+            viewMoreLabel: '更多<span class="icon"></span>'
+        });
+    });
+    </script>
+    <script src="assets/js/JavaScript.js"></script>
+    <!--<div class="navbox">
         <div class="nav">
 
             <li class="drop-menu-effect"><a href="#"><span>网站首页</span></a></li>
@@ -197,10 +252,10 @@
                         </div>
                     </div>
                 </div>
-            </li>-->
+            </li>-
 
         </div>
-    </div>
+    </div>-->
     <!--轮播-->
     <div class="slider">
         <div class="callbacks_container">
