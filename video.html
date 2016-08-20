@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style> 
+         body{font-size:12px;color:#555555;background:url('../images/bg.jpg') no-repeat center top;}
+        .text {
+          
+       text-align:center;
+        font-family:'Microsoft YaHei',Arial;
+    font-size: 14px;
+             }
+    </style>
+</head>
+<body>
+
+    <!--<div class="text"><h2>这是视频测试</h2></div>-->
+    <div id="youkuplayer5" style="width:100%;height:480px"></div>
+    <script type="text/javascript" src="http://player.youku.com/jsapi"></script>
+    <script type="text/javascript">
+        player = new YKU.Player('youkuplayer5', {
+            styleid: '0',
+            client_id: 'c66b69ed0b6be5e3',
+            vid: 'XMTY3Njc2OTI0MA',
+            newPlayer: true
+        });
+
+    </script>
+
+</body>
+</html>
