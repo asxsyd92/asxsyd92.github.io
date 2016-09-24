@@ -11,15 +11,62 @@
 <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/mdialog.css" rel="stylesheet" />
 <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="js/jquery.linq.min.js"></script>
     <script src="js/linq.min.js"></script>
     <script src="js/T_Bus_OrderDetail.js"></script>
+    <script src="js/mdialog.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <style>
+        .subtract{
+            display: block;
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 12px;
+    background: #FD888E;
+    line-height: 40px;
+    cursor: pointer;
+    color: #666;
+    text-align: center;
+    border: none;
+        }
+        .count {
+        display: block;
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 12px;
+    background: #FD888E;
+    line-height: 40px;
+    cursor: pointer;
+    color: #666;
+    text-align: center;
+    border: none;
+        }
+       .add {
+         display: block;
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 12px;
+    background: #FD888E;
+    line-height: 40px;
+    cursor: pointer;
+    color: #666;
+    text-align: center;
+    border: none;
+        }
+
+    </style>
 </head>
 <body>
   <div class="wrap bc">
     <div class="title tc pr top">
-	  <span class="back-btn"></span>产品介绍
+	  <span class="back-btn"></span><span id="pro"></span><!--产品介绍-->
 	</div>
       <div class="content" id="content">
       </div>

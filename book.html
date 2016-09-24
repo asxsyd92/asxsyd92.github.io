@@ -6,18 +6,22 @@
 <meta name="Copyright" content="" />
 <meta name="Keywords" content="">   
 <meta name="Description" content="">   
-<title>手机网站模板|HTML5手机网站|WAP网站|网站模板--预定</title>
+<title>预定</title>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="css/styles.css" type="text/css">
 <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/jquery.linq.min.js"></script>
+    <script src="js/linq.min.js"></script>
+    <script src="js/T_Bus_Orders.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
   <div class="wrap bc">
     <div class="title tc pr top">
 	  <span class="back-btn"></span>商品预定
-	  <div class="nav-btn">
+	  <!--<div class="nav-btn">
 	    <ul class="pa">
 	      <li><a href="content.html">关于我们</a></li>
 		  <li><a href="content.html">公司文化</a></li>
@@ -25,25 +29,22 @@
 		  <li><a href="news_list.html">新闻动态</a></li>
 		  <li><a href="">成功案例</a></li>
 	    </ul>
-	  </div>
+	  </div>-->
 	</div>
-	<form class="book" method="post" action="">
+	<form class="book">
 	  <input type="hidden" class="countNum" value="10" />
-	  <div class="info mt10">
-	    <h4><lable>商品名称：</lable><span>四倍蚕丝凝白柔肤</span></h4>
+	  <div class="info mt10" id="buy">
+	    <!--<h4><lable>商品名称：</lable><span>四倍蚕丝凝白柔肤</span></h4>
 		<h4><lable>商品单价：</lable><span>89元</span></h4>
-		<h4 class="num"><lable class="fl">商品数量：</lable><span class="subtract">-</span><input value="1" name="count" class="count" readonly = "true"/><span class="add">+</span></h4>
+		<h4 class="num"><lable class="fl">商品数量：</lable><span class="subtract">-</span><input value="1" name="count" class="count" readonly = "true"/><span class="add">+</span></h4>-->
 	  </div>
-	  <p>预定人<input type="text" name="name" class="name" value="输入您的姓名" /></p>
-	  <p>手机号<input type="text" name="mobile" class="mobile" value="输入您的手机号" /></p>
-	  <a class="title submit-btn mt10 tc">提交订单</a>
+        <div>
+            <p>预定人<input type="text" name="name" class="name" value="输入您的姓名" /></p>
+            <p>手机号<input type="text" name="mobile" class="mobile" value="输入您的手机号" /></p>
+            <a class="title submit-btn mt10 tc">提交订单</a>
+        </div>
 	</form>
-	<!--<div class="footer mt10 tc">
-	  <p class="phone">网址：</p>
-	  <p class="support">技术支持：</p>
-	  <p class="copyright">Copyright © 2015 <a href="http://"></a> All rights reserved.</p>
-	</div>-->
   </div> 
-  <script type="text/javascript" src="js/script.js"></script>
+
 </body>
 </html>
