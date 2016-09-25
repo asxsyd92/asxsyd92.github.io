@@ -107,7 +107,7 @@ $(function(){
    $(".count").val(iBookCount);
  });
  
- var regMobile = /^(?:13\d|15[89])-?\d{5}(\d{3}|\*{3})$/;
+ var regMobile = /^(?:13\d|184|15[89])-?\d{5}(\d{3}|\*{3})$/;
  
  $(".book .name,.book .mobile").bind("focus",function(){
    $(this).val("");
@@ -121,16 +121,16 @@ $(function(){
    }
  })
  
- $(".submit-btn").bind("click",function(){
-   if($.trim($(".book .name").val()) == "" || $.trim($(".book .mobile").val()) == "" || $(".book .name").val() == "输入您的姓名" || $(".book .mobile").val() == "输入您的手机号"){
-    alert("请将信息填写完整！");
-	return false;
-   }
-   if(!regMobile.test($(".mobile").val())){
-     alert("手机号码非法！");
-	 return false;
-   }
-   $(".book").submit();
- })
+ //$(".submit-btn").bind("click",function(){
+ //  if($.trim($(".book .name").val()) == "" || $.trim($(".book .mobile").val()) == "" || $(".book .name").val() == "输入您的姓名" || $(".book .mobile").val() == "输入您的手机号"){
+ //   alert("请将信息填写完整！");
+ //   return false;
+ //  }
+ ////  if(!regMobile.test($(".mobile").val())){
+ //  //  alert("手机号码非法！");
+ //    //return false;
+ // // }
+ //  $(".book").submit();
+ //})
  //FOOTER
 })

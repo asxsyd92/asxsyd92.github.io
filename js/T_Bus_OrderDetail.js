@@ -40,7 +40,7 @@ ExhibitionData = {
                         eachHtml = eachHtml + "<div class='book info mt10'><h4 class='num'><lable class='fl'>商品数量：</lable><span class='subtract'>-</span><input value='1' name='count' class='count' readonly = 'true'/><span class='add'>+</span></h4></div></div>";
                         eachHtml = eachHtml + " <a href='javascript:ExhibitionData.Add(" + item.KeyId + " )' class='title book-btn mt10 tc'>加入购物车</a>";
                      
-                        eachHtml = eachHtml + " <a href='book.html?id=" + item.KeyId + " ' class='title book-btn mt10 tc'>立即预定</a>";
+                        eachHtml = eachHtml + " <a onclick='ExhibitionData.Add(" + item.KeyId + " );'  href='book.html?id=" + item.KeyId + " ' class='title book-btn mt10 tc'>立即预定</a>";
                         $('#content').html(eachHtml);
                     });
                 },
@@ -71,6 +71,8 @@ ExhibitionData = {
 
     },
     Add: function (id) {
+       // var count = $("#countNum").val();
+        var count = parseInt($(".count").val());
       //  this.query = function () {
         ExhibitionData.dataBase.transaction(function (tx) {
             tx.executeSql(
@@ -79,17 +81,18 @@ ExhibitionData = {
                 if (result.rows.length > 0) {
                     //成功 
                     new TipBox({ type: 'success', str: "亲 ，你已经填加到购物车了哟！", hasBtn: true });
-                   // ExhibitionData.getAll();
+                    ExhibitionData.getAll();
                     } else {
                         ExhibitionData.dataBase.transaction(function (tx) {
                             tx.executeSql(
-                            "insert into exhibition (KeyId) values(?)",
-                            [id],
+                            "insert into exhibition (KeyId,count,state) values(?,?,?)",
+                            [id, count,1],
                             function () {
                                 new TipBox({ type: 'success', str: "亲 ，填加成功！", hasBtn: true });
                             },
                             function (tx, error) {
                                 new TipBox({ type: 'success', str: "亲 ，填加失败！", hasBtn: true });
+
                             });
                         })
                     }
@@ -143,7 +146,7 @@ ExhibitionData = {
     createTable: function () {
             ExhibitionData.dataBase.transaction(function (tx) {
                 tx.executeSql(
-                "create table if not exists exhibition (KeyId TEXT)",
+                "create table if not exists exhibition (KeyId int,count int,state int)",
                 [],
                 function (tx, result) {
                 },
@@ -153,7 +156,7 @@ ExhibitionData = {
             });
         }
     ,
-    getAll: function () {
+    getAll: function () { 
         ExhibitionData.dataBase.transaction(function (tx) {
                 tx.executeSql(
                 "select * from exhibition", [],
