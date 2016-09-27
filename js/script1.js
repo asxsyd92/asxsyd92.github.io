@@ -5,13 +5,13 @@
 	$("body").css({zoom:iScale,overflowX:'hidden'});
     $(".wrap").css("marginLeft" , "0").fadeIn(300);
 	if($(".wrap").height()*iScale<$(window).height()){
-	  $(".wrap").height($(window).height()*iScale);
+	  $(".wrap").height($(window).height()/iScale);
 	  $(".footer").css({position:'absolute',bottom:0});
     }
    }else{
      $(".wrap").fadeIn(300);
 	 if($(".wrap").height()<$(window).height()){
-	 //$(".wrap").height($(window).height());
+	  $(".wrap").height($(window).height());
 	  $(".footer").css({position:'absolute',bottom:0});
      }
    }
@@ -54,8 +54,8 @@ $(function(){
  var oFocus = $(".banner .focus a");
  oFocus.first().addClass("current");
  function bWidth(){
-   //oLi.width($(".wrap").width())
-  // oMover.width(oLi.width()*oLi.length);
+   oLi.width($(".wrap").width())
+   oMover.width(oLi.width()*oLi.length);
  }
 
  timer = setInterval(sliderMove,5000);
@@ -107,7 +107,7 @@ $(function(){
    $(".count").val(iBookCount);
  });
  
- var regMobile = /^(?:13\d|184|15[89])-?\d{5}(\d{3}|\*{3})$/;
+ var regMobile = /^(?:13\d|15[89])-?\d{5}(\d{3}|\*{3})$/;
  
  $(".book .name,.book .mobile").bind("focus",function(){
    $(this).val("");
@@ -121,16 +121,16 @@ $(function(){
    }
  })
  
- //$(".submit-btn").bind("click",function(){
- //  if($.trim($(".book .name").val()) == "" || $.trim($(".book .mobile").val()) == "" || $(".book .name").val() == "输入您的姓名" || $(".book .mobile").val() == "输入您的手机号"){
- //   alert("请将信息填写完整！");
- //   return false;
- //  }
- ////  if(!regMobile.test($(".mobile").val())){
- //  //  alert("手机号码非法！");
- //    //return false;
- // // }
- //  $(".book").submit();
- //})
+ $(".submit-btn").bind("click",function(){
+   if($.trim($(".book .name").val()) == "" || $.trim($(".book .mobile").val()) == "" || $(".book .name").val() == "输入您的姓名" || $(".book .mobile").val() == "输入您的手机号"){
+    alert("请将信息填写完整！");
+	return false;
+   }
+   if(!regMobile.test($(".mobile").val())){
+     alert("手机号码非法！");
+	 return false;
+   }
+   $(".book").submit();
+ })
  //FOOTER
 })
