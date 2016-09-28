@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+    <script>
+    $.ajax({
+    type: "Post",
+    url: "http://www.tuling123.com/openapi/api",
+        // final String POST_JSON = "{\"key\":\"df464764sdf3ds1f3adsf789213557r12-34912-482130487321\", \"info\":\"你妹的\", \"userid\":\"asxsyd92\"}";
+    data: { key: "25ea39acccb944c3a075e07d78f146dd", info: "你妹的", userid: "asxsyd92" },
+    dataType: "json",
+
+    success: function (jsondata) {
+        alert(jsondata.text);
+    }
+
+ 
+    });
+    </script>
+</body>
+</html>
